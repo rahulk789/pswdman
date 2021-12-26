@@ -1,2 +1,2 @@
 # pswdman
-a minimal password manager for generation,storage and retrieval of passwords written in c++
+A minimal password manager for generation,storage and retrieval of passwords written in c++
