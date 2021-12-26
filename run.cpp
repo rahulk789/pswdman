@@ -3,7 +3,6 @@
 int main() {
     string name;
     string pass;
-    // feature will be added later cout << "Enter the name and password to store"; 
     if (token[0]== "add"){
         cout << "enter name of the website/app";
         cin >> name ;           
