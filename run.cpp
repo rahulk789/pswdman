@@ -8,9 +8,16 @@ int main() {
     string masterpass="zyx";
     string name;
     string pass;
+<<<<<<< HEAD
     mkdir("/home/xenon/pass",0777);
     /*if (token[0]== "add"){
         cout << "enter name of the website/app";
+=======
+    if (token[0]== "add"){
+        cout << "enter name of the website/app";
+
+    /*
+>>>>>>> adaa5c08e7a729ca1bd1fa5fb0c00f5f721adf1c
     // feature will be added later cout << "Enter the name and password to store"; 
     if (token[0]== "add"){*/
         cout << "enter name of the website/app \n";
