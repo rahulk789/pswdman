@@ -19,7 +19,7 @@ int main() {
         pass=pg.passgenerator();
         //passstore ps(string name,string pass);
         //ps.writeit(string name);
-        cout << "the pass is " << pass << " \n";
+       // cout << "the pass is " << pass << " \n";
         passstore ps(name,pass);
         ps.writeit();
         passret pr(name,masterpass);
