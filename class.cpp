@@ -1,10 +1,7 @@
-#include <algorithm>
 #include <iostream>
 #include <fstream>
-#include <stdio.h>
 #include <time.h>
 #include <string>
-#include <cstdlib>
 using namespace std;
 class passgen {
     int i=0;
@@ -52,7 +49,7 @@ string passgen::passgenerator(){
 }
 
 class passstore {
-    ofstream file;
+    public:
     string name;
     string pass;
     passstore(string name,string pass) {
@@ -60,13 +57,15 @@ class passstore {
         this->pass = pass;
     }
     void writeit(){
-        file.open(name,ios::in);
+        string path(("/home/xenon/pass/"+name).c_str());
+        std::ofstream file(path);
+//        file.open(path,std::ios_base::app);
+        file << name << ":";
         file << pass << endl;
-        file.close();
     }
 };
 class passret {
-    ifstream file;
+    public:
     string masterpass;
     string name;
     string text;
@@ -75,12 +74,13 @@ class passret {
         this->masterpass = masterpass;
     }
     void readit(){
-        file.open(name,ios::out);
+        string path(("/home/xenon/pass/"+name).c_str());
+        ifstream file(path);
         while(!file.eof())
         {
-            cout << text << endl;
+            cout << text;
             file >> text;
         }
         file.close();
     }
-};
+ };
